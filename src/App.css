@@ -37,5 +37,8 @@
   }
 }
 div img {
-  width: 18rem;
+  width: 5rem;
+}
+.card-img-top {
+  width: 6rem;
 }
