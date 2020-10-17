@@ -16,6 +16,7 @@ const Countries = ({ searchResult }) => {
                 <p className="card-text">{nation.population}</p>
                 <p>{nation.region}</p>
                 <p>{nation.capital}</p>
+                <p>{nation.capital}</p>
               </div>
             </div>
           </div>
