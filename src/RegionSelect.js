@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from "react";
-
+import useCountriesData from "./useCountriesData";
 
 const RegionSelect = ({ onSelectRegion }) => {
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
-
-  const [region, setRegion] = useState([]);
+  const [country] = useCountriesData();
+  const [region, setRegion] = useState("");
 
   const onChangeHandler = (event) => {
     setRegion(event.target.value);
-      };
-
-  // useEffect(() => {
-  //   const RegionResults = country.filter((nation) =>
-  //     nation.region.toLowerCase().includes(region.toLowerCase())
-  //   );
-  //   onSelectRegion(RegionResults);
-  // }, [country, region, onSelectRegion]);
+    // country.map((item) => {
+    //   return <p>{item.name}</p>;
+    // });
+  };
+  useEffect(() => {
+    const RegResults = country.filter((nation) =>
+      nation.name.toLowerCase().includes(nation.region.toLowerCase())
+    );
+    onSelectRegion(RegResults);
+  }, [country, onSelectRegion, region]);
 
   return (
     <select onChange={onChangeHandler}>

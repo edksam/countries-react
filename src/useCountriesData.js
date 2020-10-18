@@ -20,8 +20,4 @@ const useCountriesData = () => {
   // console.log(country);
 };
 
-<<<<<<< HEAD
 export default useCountriesData;
-=======
-export default useCountriesData;
->>>>>>> 64955a2fa89da3a93871159ceb632d4c582d0e5c

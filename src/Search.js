@@ -15,7 +15,7 @@ const Search = ({ onSearchResults }) => {
       nation.name.toLowerCase().includes(searchItem.toLowerCase())
     );
     onSearchResults(results);
-    // console.log(results);
+    console.log(results);
   }, [country, searchItem, onSearchResults]);
   return (
     <Fragment>
